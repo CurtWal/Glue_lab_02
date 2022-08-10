@@ -6,13 +6,13 @@ export default class Person extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            fav: 0,
+            like: 0,
         }
     }
     // add 1 to have ever is clicked
     handleClicks(){
         this.setState((prevState) =>({
-            fav: prevState.fav + 1
+            like: prevState.like + 1
         }))
     }
   render() {
@@ -31,7 +31,7 @@ export default class Person extends Component {
         City: {this.props.City}<br></br>
         ip address: {this.props.ip_address}
         </Card.Text>
-        <Button onClick={() => this.handleClicks()} variant="outline-success"> ❤️{this.state.fav} Favorites</Button>
+        <Button onClick={() => this.handleClicks()} variant="outline-success"> ❤️{this.state.like} Likes</Button>
       </Card.Body>
         </Card>
       </div>
